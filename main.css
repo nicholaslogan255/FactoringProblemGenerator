@@ -1,0 +1,86 @@
+.section{
+    width: 95%;
+    max-width: 1200px;
+    background-color: #eeeeee;
+    margin: 1em auto;
+    padding: .25em 1em;
+
+}
+
+body{
+    margin: 0;
+}
+
+
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  button:hover{
+    background-color: rgb(41, 121, 44);
+  }
+  
+
+  form{
+      font-size: 1.5em
+  }
+
+  .big-radio{
+      padding: 16px;
+      height: 1.5em;
+      width: 1.5em
+      
+  }
+
+
+
+  /* CSS for animated Menu Icon */
+  .menu-animated {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0px 4px;
+    border: 2px solid transparent;
+    float: right;
+  }
+  .menu-animated:hover{
+      background-color: #eee;
+      border: 1px solid #999;
+      border-radius: 5px
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+
+  #factoredformat{
+      display: inline-block;
+      font-size: 2em;
+  }
