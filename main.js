@@ -274,9 +274,11 @@ $(document).ready(function () {
 
                 }
                 else if (difficulty == 2) {
+                    // range [1-9]
                     a = Math.floor(Math.random() * 9) + 1;
                     c = a;
                     k = 1;
+                     // range [1-20]
                     b = Math.floor(Math.random() * 20) + 1;
                     d = -1 * b;
                     //console.log(`a:${a} b:${b} c:${c} d:${d}`);
@@ -292,9 +294,39 @@ $(document).ready(function () {
 
             // Perfect Square Trinomial 
             case 2:
-                if (difficulty == 0) { }
-                else if (difficulty == 1) { }
-                else if (difficulty == 2) { }
+                if (difficulty == 0) {
+                    a = 1;
+                    c = a;
+                    k = 1;
+                    b = (Math.floor(Math.random() * 2) == 0 ? 1 : -1) * Math.floor(Math.random() * 5) + 1;
+                    d = b;
+                    //console.log(`a:${a} b:${b} c:${c} d:${d}`);
+
+                    polyFormat = `${a * c == 1 ? "" : a * c}X<sup>2</sup>${(b * c + a * d) == 0 ? "" : " + " + (b * c + a * d) + "X"}${b * d == 0 ? "" : " + " + b * d}`;
+                    factoredFormat = `${k == 1 ? "" : k}(${a == 1 ? "" : a}X${b == 0 ? "" : " + " + b})(${c == 1 ? "" : c}X${d == 0 ? "" : " + " + d})`;
+                 }
+                else if (difficulty == 1) { 
+                    a = 1;
+                    c = a;
+                    k = 1;
+                    b = (Math.floor(Math.random() * 2) == 0 ? 1 : -1) * Math.floor(Math.random() * 12) + 1;
+                    d = b;
+                    //console.log(`a:${a} b:${b} c:${c} d:${d}`);
+
+                    polyFormat = `${a * c == 1 ? "" : a * c}X<sup>2</sup>${(b * c + a * d) == 0 ? "" : " + " + (b * c + a * d) + "X"}${b * d == 0 ? "" : " + " + b * d}`;
+                    factoredFormat = `${k == 1 ? "" : k}(${a == 1 ? "" : a}X${b == 0 ? "" : " + " + b})(${c == 1 ? "" : c}X${d == 0 ? "" : " + " + d})`;
+                }
+                else if (difficulty == 2) { 
+                    a = 1;
+                    c = a;
+                    k = 1;
+                    b = (Math.floor(Math.random() * 2) == 0 ? 1 : -1) * Math.floor(Math.random() * 20) + 1;
+                    d = b;
+                    //console.log(`a:${a} b:${b} c:${c} d:${d}`);
+
+                    polyFormat = `${a * c == 1 ? "" : a * c}X<sup>2</sup>${(b * c + a * d) == 0 ? "" : " + " + (b * c + a * d) + "X"}${b * d == 0 ? "" : " + " + b * d}`;
+                    factoredFormat = `${k == 1 ? "" : k}(${a == 1 ? "" : a}X${b == 0 ? "" : " + " + b})(${c == 1 ? "" : c}X${d == 0 ? "" : " + " + d})`;
+                }
                 else {
                     alert("Invalid Difficulty. Contact your web developer");
                 }
