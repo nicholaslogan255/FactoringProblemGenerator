@@ -335,9 +335,49 @@ $(document).ready(function () {
 
             // Difference of Cubes 
             case 3:
-                if (difficulty == 0) { }
-                else if (difficulty == 1) { }
-                else if (difficulty == 2) { }
+                if (difficulty == 0) { 
+
+                    // range [1-4]
+                    a =  Math.floor(Math.random() * 4) + 1;
+
+                    // range [1,3,5] (must be odd otherwise can factor further)
+                    b =  Math.floor(Math.random() * 3) * 2 + 1;
+
+                    // (a^3 - b^3)
+                    polyFormat = `${a==1?"":a*a*a}X<sup>3</sup> - ${b*b*b}`;
+
+                    // (a-b)(a^2 - ab + b^b)
+                    factoredFormat = `(${a==1?"":a}X - ${b})(${a*a == 1?"":a*a}X<sup>2</sup> + ${a*b  ==1?"":a*b}X + ${b*b})`;
+
+                }
+                else if (difficulty == 1) { 
+                    // range [1-6] 
+                    a = ( Math.floor(Math.random() * 6) ) + 1;
+
+                    // range [1,3,5,7] (must be odd otherwise can factor further)
+                    b =  Math.floor(Math.random() * 4) * 2 + 1;
+
+                    // (a^3 - b^3)
+                    polyFormat = `${a==1?"":a*a*a}X<sup>3</sup> - ${b*b*b}`;
+
+                    // (a-b)(a^2 - ab + b^b)
+                    factoredFormat = `(${a==1?"":a}X - ${b})(${a*a == 1?"":a*a}X<sup>2</sup> + ${a*b  ==1?"":a*b}X + ${b*b})`;
+
+
+                }
+                else if (difficulty == 2) { 
+                     // range [1-9] 
+                     a =( Math.floor(Math.random() * 9) ) + 1;
+
+                     // range [1,3,5,7,9,11] (must be odd otherwise can factor further)
+                     b =  Math.floor(Math.random() * 6) * 2 + 1;
+ 
+                     // (a^3 - b^3)
+                     polyFormat = `${a==1?"":a*a*a}X<sup>3</sup> - ${b*b*b}`;
+ 
+                     // (a-b)(a^2 - ab + b^b)
+                     factoredFormat = `(${a==1?"":a}X - ${b})(${a*a == 1?"":a*a}X<sup>2</sup> + ${a*b  ==1?"":a*b}X + ${b*b})`;
+                }
                 else {
                     alert("Invalid Difficulty. Contact your web developer");
                 }
