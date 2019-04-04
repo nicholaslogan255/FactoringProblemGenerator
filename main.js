@@ -1,16 +1,17 @@
 
 let ansVis = 0;
-let settingVis = 1;
+let settingVis = 0;
 
 let difficulty;
 let Polynomials = [];
 
-let = polyFormat = "";
-let = factoredFormat = "";
+let polyFormat = "";
+let  factoredFormat = "";
 
 
 $(document).ready(function () {
 
+    $("#settings-content").hide();
     updateVisibility();
     applySettings();
     GeneratePolynomial();
@@ -36,10 +37,10 @@ $(document).ready(function () {
 
     function updateVisibility() {
         if (ansVis == 1) {
-            $("#factoredformat").show();
+            $("#factoredformat").css("color","transparent") ;
         }
         else {
-            $("#factoredformat").hide();
+            $("#factoredformat").css("color","#000");
         }
     }
 
@@ -75,6 +76,8 @@ $(document).ready(function () {
 
 
     function GeneratePolynomial() {
+
+        applySettings(); // 
 
         let problemType;
 
@@ -445,8 +448,8 @@ $(document).ready(function () {
         $("#factoredformat").html(factoredFormat);
 
         // hide answer
-        $("#factoredformat").hide();
-        ansVis = 0;
+        $("#factoredformat").css("color","transparent");
+        ansVis = 1;
 
     }
 });

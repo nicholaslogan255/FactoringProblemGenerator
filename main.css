@@ -2,8 +2,8 @@
     width: 95%;
     max-width: 1200px;
     background-color: #eeeeee;
-    margin: 1em auto;
-    padding: .25em 1em;
+    margin: 0 auto;
+    padding: 2em 1em;
 
 }
 
@@ -11,24 +11,58 @@ body{
     margin: 0;
 }
 
+header{
+    background-color: #560D72;
+    width: 100%;
+    padding: 20px 0px;
+}
+
+h1{
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+    
+}
+
+.mathexpression{
+    /* display: inline-block; */
+    width: 100%;
+    height: 60px;
+    position: relative;
+    font-size: 32px;
+    text-align: center;
+    float: left;
+}
+
+#settings{
+    background-color: #eee;
+}
+
+#problems{
+    background-color: rgb(245, 236, 248);
+}
+
+
 
 button {
-    background-color: #4CAF50; /* Green */
+    background-color: #560D72; /* Green */
     border: none;
     color: white;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline;
-    font-size: 16px;
+    display: inline-block;
+    font-size: 20px;
     margin: 4px 2px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
   }
 
+
+
   button:hover{
-    background-color: rgb(41, 121, 44);
+    background-color: #3E0954;
   }
   
 
@@ -43,11 +77,10 @@ button {
       
   }
 
-
-
   /* CSS for animated Menu Icon */
   .menu-animated {
-    display: inline-block;
+    /* display: inline-block; */
+    margin-right: 2em;
     cursor: pointer;
     padding: 0px 4px;
     border: 2px solid transparent;
